@@ -2,7 +2,9 @@
 
 ## Install and run
 
-npm (package manager for Node.js) - version 6.9.0 or higher is needed.
+### Requirements
+ - Node.js, can be downloaded here: https://nodejs.org/en/download/
+ - npm (package manager for Node.js) - version 6.9.0 or higher is needed
 
 Once cloned the repo, go to the folder and execute the command below to install all packages.
 
@@ -18,7 +20,7 @@ npm start
 
 ## Implementation explained
 
-The web app is created using React JS, there are 3 components and each component has its own CSS file. 
+The web app is created using React JS, there are 3 components and each component has its own CSS file. All components are implemented by using functional component considering they are much easier to read and test because they are plain JavaScript functions without state or lifecycle-hooks. Moreover, the React team mentioned that there may be a performance boost for functional component in future React versions
 
 Several libraries are used such as `react-bootstrap` and `react-perfect-scrollbar`
 
