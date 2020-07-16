@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Second Nature Recipes
 
-## Available Scripts
+## Install and run
 
-In the project directory, you can run:
+npm (package manager for Node.js) - version 6.9.0 or higher is needed.
 
-### `yarn start`
+Execute the command below to install all packages.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm install
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Once the installation is complete, run the command below to start to web app.
 
-### `yarn test`
+```
+npm start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Implementation explained
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The web app is created using React JS, there are 3 components and each component has its CSS file. 
+Several libraries are used such as `react-bootstrap` and `react-perfect-scrollbar`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Recipe List
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This component load the data from a local JSON file, then create a list of `Recipe preview` which contains the image and title of the recipe, once the preview is clicked, a pop-up window contain the details of the recipe will be displayed and you can exit the window by click the button on the top right or click anywhere outside of the window.
+ The pop-up window was implemented by using `Modal` from library `react-bootstrap`  the modal is a wrapper of component `recipe details panel` which will be explained later.
 
-### `yarn eject`
+### Recipe Preview
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This component displays the smaller sized image (75px in width) and title of the recipe. In addition,  a clicked handler is passed in which enables users to click on the preview and display the recipe details panel.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Recipe Details Panel
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This component is wrapped inside a `react-perfect-scrollbar` which enable users to scroll up and down. However, a minimum scroll bar length is defined as 50.
+Each ingredient and method is displayed on a different row.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Code style
 
-## Learn More
+In order to ensure the code has a level of clarity that makes reading and maintaining easier for anyone who has to work on it, ESLint is configured and used. The JavaScript Style Guide used for this web app is Airbnb. Prettier is also used to make code look better. Scripts below have configured 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run lint
+npm run lint-fix
+npm run lint-fix-win
+npm run lint-prettier
+npm run lint-prettier-fix
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+PS do not use `npm run lint-fix-win` on Mac, use `npm run lint-fix` instead
