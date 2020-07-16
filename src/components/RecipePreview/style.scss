@@ -1,0 +1,19 @@
+.recipe-preview {
+  margin: 1rem;
+  background-color: lightgray;
+  width: 500px;
+  height: 75px;
+  img {
+    width: 75px;
+  }
+  .title {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 12px;
+    
+		.name {
+    font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+}
