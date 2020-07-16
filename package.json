@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.5.0",
+    "eslint": "^6.6.0",
     "lint": "^0.7.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -20,7 +21,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint-fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "lint-fix-win": "eslint src/**/*.{js,jsx,ts,tsx} --fix",
     "lint-prettier": "prettier --check \"src/**/*.{css,js,jsx,ts,tsx,scss}\"",
@@ -42,7 +42,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.3.0",

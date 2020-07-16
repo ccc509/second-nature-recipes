@@ -4,7 +4,7 @@
 
 npm (package manager for Node.js) - version 6.9.0 or higher is needed.
 
-Execute the command below to install all packages.
+Once cloned the repo, go to the folder and execute the command below to install all packages.
 
 ```
 npm install
@@ -15,7 +15,6 @@ Once the installation is complete, run the command below to start to web app.
 ```
 npm start
 ```
-
 
 ## Implementation explained
 
