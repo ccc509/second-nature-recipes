@@ -9,7 +9,7 @@ function RecipePreview({ recipe, handleRecipePreviewClick }) {
       className="recipe-preview"
       onClick={() => handleRecipePreviewClick(recipe)}
     >
-      <img src={imageUrl} />
+      <img src={imageUrl} alt="" />
       <div className="title">{title}</div>
     </div>
   );

@@ -2,12 +2,10 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import React from "react";
 import "./style.scss";
 
-function RecipeDetailsPanel({recipe}) {
+function RecipeDetailsPanel({ recipe }) {
   const { method, ingredients, imageUrl, cookingTime, servings } = recipe;
 
-  const getStepString = (step, i) =>{
-    return i+1 + ": " + step;
-  }
+  const getStepString = (step, i) => `${i + 1}: ${step}`;
 
   return (
     <div className="recipe-details-panel">
@@ -16,7 +14,7 @@ function RecipeDetailsPanel({recipe}) {
           minScrollbarLength: 50
         }}
       >
-        <img src={imageUrl} />
+        <img src={imageUrl} alt="" />
         <table className="recipe-details-panel-section">
           <thead>
             <tr>
@@ -24,9 +22,9 @@ function RecipeDetailsPanel({recipe}) {
             </tr>
           </thead>
           <tbody>
-              <tr>
-                <th>{cookingTime}</th>
-              </tr>
+            <tr>
+              <th>{cookingTime}</th>
+            </tr>
           </tbody>
         </table>
 
@@ -37,9 +35,9 @@ function RecipeDetailsPanel({recipe}) {
             </tr>
           </thead>
           <tbody>
-              <tr>
-                <th>{servings}</th>
-              </tr>
+            <tr>
+              <th>{servings}</th>
+            </tr>
           </tbody>
         </table>
 
