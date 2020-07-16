@@ -18,21 +18,24 @@ npm start
 
 ## Implementation explained
 
-The web app is created using React JS, there are 3 components and each component has its CSS file. 
+The web app is created using React JS, there are 3 components and each component has its own CSS file. 
+
 Several libraries are used such as `react-bootstrap` and `react-perfect-scrollbar`
 
 ### Recipe List
 
-This component load the data from a local JSON file, then create a list of `Recipe preview` which contains the image and title of the recipe, once the preview is clicked, a pop-up window contain the details of the recipe will be displayed and you can exit the window by click the button on the top right or click anywhere outside of the window.
- The pop-up window was implemented by using `Modal` from library `react-bootstrap`  the modal is a wrapper of component `recipe details panel` which will be explained later.
+This component loads the data from a local JSON file, then creates a list of `Recipe preview` which contains the image and title of the recipe, once the preview is clicked, a pop-up window contain the details of the recipe will be displayed and you can exit the window by click the button on the top right or click anywhere outside of the window.
+
+The pop-up window was implemented by using `Modal` from library `react-bootstrap`  the modal is a wrapper of component `recipe details panel` which will be explained later.
 
 ### Recipe Preview
 
-This component displays the smaller sized image (75px in width) and title of the recipe. In addition,  a clicked handler is passed in which enables users to click on the preview and display the recipe details panel.
+This component displays the smaller sized image (75px in width) and title of the recipe. In addition, a clicked handler is passed in which enables users to click on the preview and display the recipe details panel.
 
 ### Recipe Details Panel
 
-This component is wrapped inside a `react-perfect-scrollbar` which enable users to scroll up and down. However, a minimum scroll bar length is defined as 50.
+This component is wrapped inside a `react-perfect-scrollbar` which enables users to scroll up and down. However, a minimum scroll bar length is defined as 50.
+
 Each ingredient and method is displayed on a different row.
 
 ## Code style
