@@ -1,0 +1,31 @@
+.recipe-details-panel{
+  width: 780px;
+  img {
+    width: 760px;
+  }
+
+  .recipe-details-panel-section {
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 0.9em;
+    width: 760px;
+  }
+  
+  .recipe-details-panel-section thead tr {
+    background-color: #ffbf00;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .recipe-details-panel-section th,
+  .recipe-details-panel-section td {
+    padding: 7px 15px;
+  }
+  
+  .recipe-details-panel-section tbody tr td {
+    border-bottom: 1px solid lightgray;
+    margin-top: 10px;
+    padding-top: 2px;
+  }
+}

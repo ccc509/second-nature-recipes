@@ -12,26 +12,33 @@ function RecipeList() {
 
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  const handleRecipePreviewClick = recipe => {
-    setShowRecipeDetails(true);
+  const handleRecipePreviewClick = (recipe) => {
     setSelectedRecipe(recipe);
+    setShowRecipeDetails(true);
   };
 
   return (
     <div className="recipe-list">
-      <Modal
-        show={showRecipeDetails}
-        onHide={() => setShowRecipeDetails(false)}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-      </Modal>
+      {
+        selectedRecipe && (
+          <Modal
+            show={showRecipeDetails}
+            onHide={() => setShowRecipeDetails(false)}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>{selectedRecipe.title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <RecipeDetailsPanel recipe={selectedRecipe}/>
+            </Modal.Body>
+          </Modal>
+        )
+      }
       <h1>Second Nature Recipes</h1>
-      {recipes.map(recipe => (
+      {recipes.map((recipe,i) => (
         <RecipePreview
           recipe={recipe}
+          rowKey={i}
           handleRecipePreviewClick={handleRecipePreviewClick}
         />
       ))}
