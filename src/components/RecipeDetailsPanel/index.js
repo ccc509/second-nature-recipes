@@ -3,7 +3,7 @@ import React from "react";
 // import QualityControlResultRows from "./QualityControlResultRows";
 
 function RecipeDetailsPanel(recipe) {
-  const { method, ingredients, imageUrl, cookingTime, title} = recipe;
+  const { method, ingredients, imageUrl, cookingTime, title } = recipe;
   return (
     <div className="metadata">
       <PerfectScrollbar
@@ -11,8 +11,7 @@ function RecipeDetailsPanel(recipe) {
           minScrollbarLength: 50
         }}
       >
-          <h1>{title}</h1>
-
+        <h1>{title}</h1>
       </PerfectScrollbar>
     </div>
   );
