@@ -20,13 +20,13 @@ npm start
 
 ## Implementation explained
 
-The web app is created using React JS, there are 3 components and each component has its own CSS file. All components are implemented by using functional component considering they are much easier to read and test because they are plain JavaScript functions without state or lifecycle-hooks. Moreover, the React team mentioned that there may be a performance boost for functional component in future React versions
+The web app is created using React JS, there are 3 components and each component has its own CSS file. All components are implemented using functional component considering they are much easier to read and test because they are plain JavaScript functions without state or lifecycle-hooks. Moreover, the React team recently mentioned that there may be a performance boost for functional component in future React versions.
 
 Several libraries are used such as `react-bootstrap` and `react-perfect-scrollbar`
 
 ### Recipe List
 
-This component loads the data from a local JSON file, then creates a list of `Recipe preview` which contains the image and title of the recipe, once the preview is clicked, a pop-up window contain the details of the recipe will be displayed and you can exit the window by click the button on the top right or click anywhere outside of the window.
+This component loads the data from a local JSON file, then creates a list of `Recipe preview` which contains the image and title of the recipe, once the preview is clicked, a pop-up window contains the details of the recipe will be displayed and you can close the window by clicking the close button on the top right or simply clicking anywhere outside of the window.
 
 The pop-up window was implemented by using `Modal` from library `react-bootstrap`  the modal is a wrapper of component `recipe details panel` which will be explained later.
 
@@ -36,13 +36,13 @@ This component displays the smaller sized image (75px in width) and title of the
 
 ### Recipe Details Panel
 
-This component is wrapped inside a `react-perfect-scrollbar` which enables users to scroll up and down. However, a minimum scroll bar length is defined as 50.
+This component is wrapped inside a `react-perfect-scrollbar` which enables users to scroll up and down. However, a minimum scrollbar length is defined as 50. The image displayed is scaled to fit the panel (width 760px).
 
 Each ingredient and method is displayed on a different row.
 
 ## Code style
 
-In order to ensure the code has a level of clarity that makes reading and maintaining easier for anyone who has to work on it, ESLint is configured and used. The JavaScript Style Guide used for this web app is Airbnb. Prettier is also used to make code look better. Scripts below have configured 
+In order to ensure the code has a level of clarity that makes reading and maintaining easier for anyone who has to work on it, ESLint is configured and used. The JavaScript Style Guide used for this web app is Airbnb. Prettier is also used to make code look better. Scripts below have configured. Details of each script can be found in the file `package.json`
 
 ```
 npm run lint

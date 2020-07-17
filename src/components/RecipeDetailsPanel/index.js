@@ -1,5 +1,6 @@
 import PerfectScrollbar from "react-perfect-scrollbar";
 import React from "react";
+import { MIN_SCROLLBAR_LENGTH } from "../constants";
 import "./style.scss";
 
 function RecipeDetailsPanel({ recipe }) {
@@ -11,7 +12,7 @@ function RecipeDetailsPanel({ recipe }) {
     <div className="recipe-details-panel">
       <PerfectScrollbar
         options={{
-          minScrollbarLength: 50
+          minScrollbarLength: MIN_SCROLLBAR_LENGTH
         }}
       >
         <img src={imageUrl} alt="" />
